@@ -16,6 +16,7 @@ export interface SubmitDeparturePointRequestBody {
   room_id: string;
   name: string;
   region_name: string;
+  full_address: string;
   start_x: 0;
   start_y: 0;
 }
