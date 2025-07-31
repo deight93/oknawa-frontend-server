@@ -12,15 +12,11 @@ export default class SearchService {
 
     const { data } = await edgeApi.post('/functions/v1/location-points', { ...requestBody });
 
-    console.log('searchPlaces:', data);
-
     return data;
   }
 
   static async searchPolling(mapId: string) {
     const { data } = await pollingApi.get(`/rest/v1/location_result?map_id=eq.${mapId}&select=*,station_info!station_info_map_id_fkey(*)`);
-
-    console.log('searchPolling:', data);
 
     return data;
   }
@@ -31,8 +27,6 @@ export default class SearchService {
     }
 
     const { data } = await pollingApi.get(`/rest/v1/station_info?share_key=eq.${shareKey}&select=*`);
-
-    console.log('searchPlacesWithShareKey:', data);
 
     return data;
   }

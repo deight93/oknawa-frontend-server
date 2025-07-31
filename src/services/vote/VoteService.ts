@@ -12,8 +12,6 @@ export default class VoteService {
       },
     );
 
-    console.log('vote msg:', data.msg);
-
     return data;
   }
 
@@ -32,11 +30,8 @@ export default class VoteService {
       );
 
       if (response.status === 204) {
-        console.log('vote-confirm msg: 약속 지역 확정 완료 (204)');
         return { msg: '약속 지역 확정 완료 (204)' };
       }
-
-      console.log('vote-confirm msg:', response.data?.msg ?? response.data);
       return response.data;
     } catch (error) {
       console.error('vote-confirm error:', error);
