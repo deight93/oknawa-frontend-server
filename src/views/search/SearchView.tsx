@@ -71,6 +71,7 @@ export default function SearchView({ type }: SearchViewProps) {
               room_id: shareRoomId,
               name: searchForm.name,
               region_name: searchForm.address.regionName,
+              full_address: searchForm.address.fullAddress,
               start_x: searchForm.address.latitude,
               start_y: searchForm.address.longitude,
             }
@@ -89,6 +90,7 @@ export default function SearchView({ type }: SearchViewProps) {
               room_id: storageRoomData.roomId,
               name: searchForm.name,
               region_name: searchForm.address.regionName,
+              full_address: searchForm.address.fullAddress,
               start_x: searchForm.address.latitude,
               start_y: searchForm.address.longitude,
             }
