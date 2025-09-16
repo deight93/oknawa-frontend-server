@@ -34,12 +34,12 @@ export default function SearchCompleteList() {
   const setSearchState = useSetAtom(searchState);
   const setMapIdInfo = useSetAtom(mapIdState);
 
-  const { mutate: placeSearchMutate } = usePlaceSearchMutation();
   const {
-    mutate: placeSearchMapIdMutate,
+    mutate: placeSearchMutate,
     isPending,
     isSuccess,
-  } = usePlaceSearchMapIdMutation();
+  } = usePlaceSearchMutation();
+  const { mutate: placeSearchMapIdMutate } = usePlaceSearchMapIdMutation();
 
   const handleSearchBtnClick = () => {
     placeSearchMutate(searchList, {

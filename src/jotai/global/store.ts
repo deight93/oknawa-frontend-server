@@ -52,9 +52,3 @@ export const searchState = atom<SearchState[]>([]);
 export const bottomSheetState = atomWithReset<BottomSheetState>(
   bottomSheetInitialState,
 );
-
-export const searchHistoryState = atomWithStorage(
-  'searchHistory',
-  initialState,
-  createJSONStorage(() => localStorage),
-);
